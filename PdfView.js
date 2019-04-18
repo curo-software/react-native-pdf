@@ -255,7 +255,7 @@ export default class PdfView extends Component {
             y: (this.state.contentOffset.y + pinchInfo.pageY) * (newScale / this.state.scale) - pinchInfo.pageY
         }
         this.setState({scale: newScale, newContentOffset: newContentOffset});
-        this.props.onScaleChanged(newScale);
+        this.props.onScaleChanged({ newScale, pinchInfo });
 
     };
 
